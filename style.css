@@ -1,0 +1,395 @@
+/*Main containers */
+   * {
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+   }
+   body {
+      border-top: 10px solid #1dc9c3;
+      font-family: sans-serif;
+      color: #444;
+      position: relative;
+   }
+
+   .container {
+      width:1275px;
+      margin:0 auto;
+   }
+
+   .main {
+      width:900px;
+      margin:0;
+   }
+
+   .main-header {
+      background-color: #f7f7f7;
+      padding: 20px 40px;
+      /* margin-bottom:60px; */
+      
+   }
+
+   nav {
+      font-size: 16px;
+   }
+
+   article {
+      margin: 0 0 50px 0;
+   }
+
+   aside {
+      background-color: #f7f7f7;
+      border-top: 5px solid #1dc9c3; 
+      border-bottom: 5px solid #1dc9c3;
+      padding: 30px 50px;
+      /* margin-top: 50px; */
+   }
+
+   
+
+   
+
+
+
+
+
+/*Elements*/
+   h1, h2, h3 {
+      color:#1dc9c3; 
+      text-decoration:underline;
+   }
+
+   h1 {
+      font-size: 30px;
+      font-weight: 700;
+      font-style: italic;
+
+      /* text-align: center; */
+      text-decoration:none;
+      text-transform: uppercase;
+   }
+
+   h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      position: relative;
+   }
+
+   h3 {
+      font-size: 26px;
+      margin:30px opx;
+   }
+
+   h4 {
+      font-size: 20px;
+      margin-bottom: 30px;
+   }
+
+   p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+   }
+
+   ul, ol {
+      margin-left: 50px;
+      margin-bottom:15px;
+   }
+
+   li {
+      font-size: 15px;
+      margin-bottom: 10px;
+   }
+
+   li:last-child {
+      margin-bottom: 0;
+   }
+
+
+
+
+
+/* Other selectors (ordered from top to bottom of the webpage)*/
+
+   .nav-ele:link {
+      font-size: 20px;
+      font-weight: bold;
+      background-color:rgba(193, 245, 228, 0.241) ;
+      color: #048d88;
+      margin-right: 10px;
+      display: inline-block;
+   }
+
+   .nav-ele:link:last-child {
+      margin-right: 0;
+   }
+
+   .introduction {
+      margin-bottom: 40px;
+   }
+
+   #author {
+      font-style: italic;
+      font-size: 14px;
+   }
+
+   .post-image {
+      width: 100%;
+      height: auto;
+   }
+
+   .related-header {
+      text-align: center;
+   }
+
+   .related-author {
+      font-size: 14px;
+      font-weight: bold;
+   }
+
+   .related {
+      list-style: none;
+      margin-left: 0;
+   }
+
+   .why-learn-html {
+      margin-bottom: 0;
+   }
+
+   #Copyright {
+      font-size: 14px;
+   }
+
+   .like {
+      font-size: 22px;
+      padding:10px;
+      position:absolute;
+      bottom:50px;
+      right:120px;
+      cursor: pointer;
+   }
+
+
+
+
+
+
+/* Pseudo-classes */
+   /* li:first-child {
+      font-weight: bold;
+   }
+
+   li:last-child {
+      font-style: italic;
+   }
+
+   li:nth-child(2) {
+      color: red;
+   }
+
+   li:nth-child(odd) {
+      color:#1dc9c3;
+   }
+
+
+   main p:last-child {
+      color: red;
+   } */
+
+
+   /* Styling hperlinks using psuedo classes */
+    
+      /* unvisited link */
+         a:link, a:visited {
+            color:#1dc9c3;
+            text-decoration: none;
+         }
+         
+
+      /* Hovering over link  */
+         a:hover {
+            color:orangered;
+            font-weight: bold;
+            text-decoration: underline solid orangered;
+         }
+
+      /* When user click on a link  */
+         a:active {
+            background-color: black;
+            font-style: italic;
+         }
+ 
+   /* LVHA */
+
+
+
+
+/*Pseudo elements*/
+   /* h1::first-letter {
+      font-style: normal;
+      margin-right: 5px;
+   }
+   
+
+   h2::first-letter {
+      font-size: 80px;
+   }
+
+   p::first-line {
+      color: #1dc9c3;
+   }
+
+   /* combining sibling and pseudo element
+      h3 + p::first-line {  
+            color:red;
+         } */
+
+         
+   /* h2::after {
+      content:'Top';
+      background-color: #ffe70e;
+      color: #444;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      padding:5px 10px;
+      position: absolute;
+      top: -15px;
+      right: -25px;
+   }   */
+
+
+   
+
+
+
+
+/* Floats
+   .author-img {
+      float:left;
+   }
+
+   .author {
+      margin-left: 10px;
+      margin-top:32px;
+      float:left;
+   }
+
+   h1 {
+      float:left;
+   }
+
+   nav {
+      float:right;
+   }
+
+   .main-header{
+      display: flow-root;
+ }
+
+   .clearfix::after {
+      content:'';
+      display: block;
+      clear: both;
+   }
+
+
+
+   
+   aside {
+      float: right;
+      width:25%;
+   }
+
+   
+   .main {
+      float:left;
+      width:65%;
+   }
+
+
+   footer {
+      clear: both;
+   } */
+
+   
+/*Flexbox*/
+   .main-header {
+      display:flex;
+      justify-content: space-between;
+   }
+
+   .author-box {
+      display: flex;
+      gap:20px;
+      margin-bottom: 10px;
+   }
+
+   .author {
+      align-self: flex-end;
+      margin-bottom: 0;
+   }
+
+   .related-post {
+      display: flex;
+      gap:10px;
+      align-items:flex-end;
+      margin-bottom: 30px;
+   }
+
+   .related-author {
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: italic;
+   }
+   .related-link:link {
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+   }
+
+   /* .main-aside {
+      display: flex;
+      gap:75px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+   }
+
+   main {
+      flex:1;
+   }
+
+   aside {
+      flex: 0 0 300px;
+   } */
+
+
+/* Grid */
+   .container{
+      display: grid;
+      /* grid-template-rows: 150px 1fr 700px 20px; */
+      grid-template-columns: auto 300px;
+      column-gap: 75px;  
+      row-gap: 60px;
+      justify-content: start;
+      align-items: start;
+   }
+
+   .main-header{
+      grid-column: 1/ -1;
+   }
+
+   .main {
+      grid-area: 2/1/4/2;
+   }
+
+   aside{
+      /* grid-area: 2/2/3/3; */
+   }
+
+   footer {
+      grid-column: 1/-1;
+   }
+
+   

@@ -1,0 +1,150 @@
+/*// BASE STYLES //*/
+
+html, body{
+   height: 100%;
+   width:100%;
+   overflow: hidden;
+   margin: 0;
+ }
+ 
+ .grass, .sky, .road{
+   position: relative;
+ }
+ 
+ .sky{
+   height: 40%;
+   background: skyblue;
+ }
+ 
+ .grass{
+   height: 30%;
+   background: seagreen;
+ }
+ 
+ .road{
+   height: 30%;
+   background: dimgrey;
+   box-sizing: border-box;
+   border-top: 10px solid grey;
+   border-bottom: 10px solid grey;
+   width: 100%;
+ }
+ 
+ .lines{
+   box-sizing: border-box;
+   border: 5px dashed #fff;
+   height: 0px;
+   width: 100%;
+   position: absolute;
+   top: 45%;
+ }
+ 
+ /*// ELEMENTS TO ANIMATE //*/
+ 
+ .cloud{
+   position:absolute;
+   box-sizing: border-box;
+ } 
+ 
+   .cloud:nth-child(1) {
+     width:200px;
+     top:120px;
+     opacity: 0.5;
+     animation: wind 60s linear 0s infinite normal ;
+   }
+   
+   .cloud:nth-child(2) {
+     width:300px;
+     top:0;
+     animation: wind 40s linear 0s infinite normal ;
+   }
+ 
+ 
+   .mario {
+     
+     position: absolute;
+     top:-40px;
+     left:0px;
+     
+     animation-name: drive;
+     animation-duration: 8s;
+     animation-timing-function:linear;
+     animation-delay: 1s;
+     animation-iteration-count: infinite;
+     animation-fill-mode: both;
+     /* animation-direction: alternate; */
+     /* animation-play-state: running; */
+ 
+     /* animation: drive 8s linear 0s infinite both, jump 0.3s ease 1.2s 2; */
+   }
+ 
+ 
+ 
+ 
+   .luigi {
+     
+     position: absolute;
+     top:70px;
+     animation-name: driveReverse;
+     animation-duration: 8s;
+     animation-timing-function: linear;
+     animation-direction: reverse;
+     animation-iteration-count: infinite;
+     animation-fill-mode: both;
+     
+   }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*// KEYFRAMES //*/
+   @keyframes wind {
+     from{
+       left:-300px;
+     }
+ 
+     to {
+       left: 100%;
+     }
+   }
+ 
+ 
+   @keyframes drive {
+     from{ 
+       transform: translate(-100PX) scale(0.5);
+       
+     }
+ 
+     to{
+       transform: translate(100vw) scale(0.5);
+     }
+   }
+ 
+   @keyframes driveReverse {
+     from{ 
+       transform: translate(-100px) scale(0.5) rotateZ(180deg) rotateX(180deg);
+     }
+ 
+     to{
+       transform: translate(100VW) scale(0.5) rotateZ(180deg) rotateX(180deg);
+     }
+   }
+ 
+   
+   @keyframes jump {
+     0%{
+       top:-40px;
+     }
+ 
+     50% {
+       top:-100px
+     }
+ 
+     100% {
+       top:-40px;
+     }
+   }
